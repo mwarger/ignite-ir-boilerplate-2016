@@ -7,7 +7,7 @@ module.exports = async function (context) {
 
   // validation
   if (isBlank(parameters.first)) {
-    print.info(`${context.runtime.brand} generate saga <name>\n`)
+    print.info(`${context.runtime.brand} generate screen <name>\n`)
     print.info('A name is required.')
     return
   }
@@ -21,7 +21,7 @@ module.exports = async function (context) {
       target: `App/Containers/${name}Screen.js`
     },
     {
-      template: `saga.ejs`,
+      template: `screen-style.ejs`,
       target: `App/Containers/Styles/${name}ScreenStyle.js`
     }
   ]
